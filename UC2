@@ -1,0 +1,18 @@
+mysql> create table employee_payroll
+    -> (ID INT NOT NULL AUTO_INCREMENT,
+    -> NAME VARCHAR(30) NOT NULL,
+    -> SALARY DOUBLE NOT NULL,
+    -> START DATE NOT NULL,
+    -> primary key(ID));
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> describe employee_payroll;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| ID     | int         | NO   | PRI | NULL    | auto_increment |
+| NAME   | varchar(30) | NO   |     | NULL    |                |
+| SALARY | double      | NO   |     | NULL    |                |
+| START  | date        | NO   |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+4 rows in set (0.05 sec)
