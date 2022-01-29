@@ -1,0 +1,16 @@
+mysql> update employee_payroll set gender = 'M' where NAME = 'Mark' or NAME = 'Steve';
+Query OK, 2 rows affected (0.02 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from employee_payroll;
++----+-------+--------+---------+------------+
+| ID | NAME  | Gender | SALARY  | START      |
++----+-------+--------+---------+------------+
+|  1 | Mark  | M      | 1200000 | 2021-09-01 |
+|  7 | Peter | M      | 1300000 | 2021-10-01 |
+|  8 | John  | M      | 1000000 | 2021-03-01 |
+|  9 | Tom   | M      | 1400000 | 2021-04-01 |
+| 10 | Steve | M      | 1100000 | 2021-02-01 |
+| 11 | Jerry | M      | 1300000 | 2021-07-01 |
++----+-------+--------+---------+------------+
+6 rows in set (0.00 sec)
