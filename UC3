@@ -1,0 +1,7 @@
+mysql> insert into employee_payroll (NAME, SALARY, START) VALUES ("Peter", 1300000, "2021-10-01"),
+    -> ("John", 1000000, "2021-03-01"),
+    -> ("Tom", 1400000, "2021-04-01"),
+    -> ("Steve", 1100000, "2021-02-01"),
+    -> ("Jerry", 1300000, "2021-07-01");
+Query OK, 5 rows affected (0.02 sec)
+Records: 5  Duplicates: 0  Warnings: 0
