@@ -1,0 +1,54 @@
+mysql> select * from employee_payroll;
++----+---------+--------+---------+------------+
+| ID | NAME    | Gender | SALARY  | START      |
++----+---------+--------+---------+------------+
+|  1 | Mark    | M      | 1200000 | 2021-09-01 |
+|  7 | Peter   | M      | 1300000 | 2021-10-01 |
+|  8 | John    | M      | 1000000 | 2021-03-01 |
+|  9 | Tom     | M      | 1400000 | 2021-04-01 |
+| 10 | Steve   | M      | 1100000 | 2021-02-01 |
+| 11 | Jerry   | M      | 1300000 | 2021-07-01 |
+| 12 | Charlie | F      | 1200000 | 2021-09-01 |
+| 13 | Sophie  | F      | 1300000 | 2021-05-01 |
++----+---------+--------+---------+------------+
+8 rows in set (0.00 sec)
+
+mysql> select Sum(Salary) from employee_payroll where gender = "F" group by gender;
++-------------+
+| Sum(Salary) |
++-------------+
+|     2500000 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select min(Salary) from employee_payroll where gender = "F" group by gender;
++-------------+
+| min(Salary) |
++-------------+
+|     1200000 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select max(Salary) from employee_payroll where gender = "M" group by gender;
++-------------+
+| max(Salary) |
++-------------+
+|     1400000 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select avg(Salary) from employee_payroll where gender = "M" group by gender;
++--------------------+
+| avg(Salary)        |
++--------------------+
+| 1216666.6666666667 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select count(Salary) from employee_payroll where gender = "M" group by gender;
++---------------+
+| count(Salary) |
++---------------+
+|             6 |
++---------------+
+1 row in set (0.00 sec)
