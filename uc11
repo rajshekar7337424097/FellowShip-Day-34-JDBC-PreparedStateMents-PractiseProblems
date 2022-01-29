@@ -1,0 +1,10 @@
++-----------------------+
+| Tables_in_employee_db |
++-----------------------+
+| address_tbl           |
+| department_tbl        |
+| employee_tbl          |
+| phone_tbl             |
+| salary_tbl            |
++-----------------------+
+5 rows in set (0.01 sec)
