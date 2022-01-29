@@ -1,0 +1,38 @@
+mysql> alter table employee_payroll rename column SALARY TO BASIC_PAY;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE EMPLOYEE_PAYROLL ADD DEDUCTIONS DOUBLE NOT NULL;
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE EMPLOYEE_PAYROLL ADD TAXABLE_PAY DOUBLE NOT NULL;
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE EMPLOYEE_PAYROLL ADD TAX DOUBLE NOT NULL;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE EMPLOYEE_PAYROLL ADD NET_PAY DOUBLE NOT NULL;
+Query OK, 0 rows affected (0.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE EMPLOYEE_PAYROLL;
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| ID           | int         | NO   | PRI | NULL    | auto_increment |
+| NAME         | varchar(30) | NO   |     | NULL    |                |
+| address      | varchar(50) | YES  |     | india   |                |
+| PHONE_NUMBER | varchar(10) | YES  |     | NULL    |                |
+| DEPARTMENT   | varchar(30) | YES  |     | NULL    |                |
+| Gender       | char(1)     | YES  |     | NULL    |                |
+| BASIC_PAY    | double      | NO   |     | NULL    |                |
+| START        | date        | NO   |     | NULL    |                |
+| DEDUCTIONS   | double      | NO   |     | NULL    |                |
+| TAXABLE_PAY  | double      | NO   |     | NULL    |                |
+| TAX          | double      | NO   |     | NULL    |                |
+| NET_PAY      | double      | NO   |     | NULL    |                |
++--------------+-------------+------+-----+---------+----------------+
+12 rows in set (0.02 sec)
