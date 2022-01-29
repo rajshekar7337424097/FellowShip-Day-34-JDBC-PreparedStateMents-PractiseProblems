@@ -1,0 +1,31 @@
+mysql> select SALARY FROM employee_payroll;
++---------+
+| SALARY  |
++---------+
+| 1200000 |
+| 1300000 |
+| 1000000 |
+| 1400000 |
+| 1100000 |
+| 1300000 |
++---------+
+6 rows in set (0.00 sec)
+
+mysql> select salary from employee_payroll where NAME = 'John';
++---------+
+| salary  |
++---------+
+| 1000000 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select * from employee_payroll where start between cast('2021-02-01' as date) and Cast('2021-07-01' as date);
++----+-------+---------+------------+
+| ID | NAME  | SALARY  | START      |
++----+-------+---------+------------+
+|  8 | John  | 1000000 | 2021-03-01 |
+|  9 | Tom   | 1400000 | 2021-04-01 |
+| 10 | Steve | 1100000 | 2021-02-01 |
+| 11 | Jerry | 1300000 | 2021-07-01 |
++----+-------+---------+------------+
+4 rows in set (0.02 sec)
